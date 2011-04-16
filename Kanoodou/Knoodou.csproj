@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2524BABF-B0F2-40ED-8889-90D77C9F083C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Knoodou</RootNamespace>
+    <AssemblyName>Knoodou</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Arthur\Desktop\deploy\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>11</ApplicationRevision>
+    <ApplicationVersion>0.9.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>60039315E08B946284145E945FA3A24AB83FFF1F</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Knoodou_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo-icone-64.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.3.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files\MySQL\MySQL Connector Net 6.3.4\Assemblies\v2.0\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Dlls\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Twitterizer.Data">
+      <HintPath>Dlls\Twitterizer.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Twitterizer2">
+      <HintPath>Dlls\Twitterizer2.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Banco\Cliente.cs" />
+    <Compile Include="Banco\Config.cs" />
+    <Compile Include="Banco\Default.cs" />
+    <Compile Include="Banco\Email.cs" />
+    <Compile Include="Banco\Filmes.cs" />
+    <Compile Include="Banco\Formato.cs" />
+    <Compile Include="Banco\Dependente.cs" />
+    <Compile Include="Banco\Genero.cs" />
+    <Compile Include="Banco\Locacao.cs" />
+    <Compile Include="Banco\Relatorio.cs" />
+    <Compile Include="Banco\Usuario.cs" />
+    <Compile Include="Configs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configs.Designer.cs">
+      <DependentUpon>Configs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Internet\Facebook.cs" />
+    <Compile Include="Internet\Mail.cs" />
+    <Compile Include="Internet\Twitter.cs" />
+    <Compile Include="tlaAddCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tlaAddCliente.Designer.cs">
+      <DependentUpon>tlaAddCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sobre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sobre.Designer.cs">
+      <DependentUpon>Sobre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tlaAddFilmes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tlaAddFilmes.Designer.cs">
+      <DependentUpon>tlaAddFilmes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tlaAddFormato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tlaAddFormato.Designer.cs">
+      <DependentUpon>tlaAddFormato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tlaAddClienteDependente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tlaAddClienteDependente.Designer.cs">
+      <DependentUpon>tlaAddClienteDependente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tlaAddGenero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tlaAddGenero.Designer.cs">
+      <DependentUpon>tlaAddGenero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tlaAddUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tlaAddUsuario.Designer.cs">
+      <DependentUpon>tlaAddUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tlaCarrinho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tlaCarrinho.Designer.cs">
+      <DependentUpon>tlaCarrinho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tlaConfigEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tlaConfigEmail.Designer.cs">
+      <DependentUpon>tlaConfigEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tlaConfigFacebook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tlaConfigFacebook.Designer.cs">
+      <DependentUpon>tlaConfigFacebook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tlaConfigTwitter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tlaConfigTwitter.Designer.cs">
+      <DependentUpon>tlaConfigTwitter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tlaCRUDfilmes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tlaCRUDfilmes.Designer.cs">
+      <DependentUpon>tlaCRUDfilmes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tlaCRUDformato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tlaCRUDformato.Designer.cs">
+      <DependentUpon>tlaCRUDformato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tlaCADcliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tlaCADcliente.Designer.cs">
+      <DependentUpon>tlaCADcliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tlaCRUDgenero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tlaCRUDgenero.Designer.cs">
+      <DependentUpon>tlaCRUDgenero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tlaCRUDusuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tlaCRUDusuarios.Designer.cs">
+      <DependentUpon>tlaCRUDusuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tlaEnviarEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tlaEnviarEmail.Designer.cs">
+      <DependentUpon>tlaEnviarEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tlaGERLoca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tlaGERLoca.Designer.cs">
+      <DependentUpon>tlaGERLoca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tlaInadimplentes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tlaInadimplentes.Designer.cs">
+      <DependentUpon>tlaInadimplentes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tlaLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tlaLogin.Designer.cs">
+      <DependentUpon>tlaLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tlaPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tlaPrincipal.Designer.cs">
+      <DependentUpon>tlaPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tlaRelatDiario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tlaRelatDiario.Designer.cs">
+      <DependentUpon>tlaRelatDiario.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Configs.resx">
+      <DependentUpon>Configs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tlaAddCliente.resx">
+      <DependentUpon>tlaAddCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Sobre.resx">
+      <DependentUpon>Sobre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tlaAddFilmes.resx">
+      <DependentUpon>tlaAddFilmes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tlaAddFormato.resx">
+      <DependentUpon>tlaAddFormato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tlaAddClienteDependente.resx">
+      <DependentUpon>tlaAddClienteDependente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tlaAddGenero.resx">
+      <DependentUpon>tlaAddGenero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tlaAddUsuario.resx">
+      <DependentUpon>tlaAddUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tlaCarrinho.resx">
+      <DependentUpon>tlaCarrinho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tlaConfigEmail.resx">
+      <DependentUpon>tlaConfigEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tlaConfigFacebook.resx">
+      <DependentUpon>tlaConfigFacebook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tlaConfigTwitter.resx">
+      <DependentUpon>tlaConfigTwitter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tlaCRUDfilmes.resx">
+      <DependentUpon>tlaCRUDfilmes.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tlaCRUDformato.resx">
+      <DependentUpon>tlaCRUDformato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tlaCADcliente.resx">
+      <DependentUpon>tlaCADcliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tlaCRUDgenero.resx">
+      <DependentUpon>tlaCRUDgenero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tlaCRUDusuarios.resx">
+      <DependentUpon>tlaCRUDusuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tlaEnviarEmail.resx">
+      <DependentUpon>tlaEnviarEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tlaGERLoca.resx">
+      <DependentUpon>tlaGERLoca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tlaInadimplentes.resx">
+      <DependentUpon>tlaInadimplentes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tlaLogin.resx">
+      <DependentUpon>tlaLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tlaPrincipal.resx">
+      <DependentUpon>tlaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tlaRelatDiario.resx">
+      <DependentUpon>tlaRelatDiario.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Knoodou_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="imagens\11203514601646303082 %281%29.png" />
+    <Content Include="imagens\15017117291408889190.png" />
+    <Content Include="imagens\loading.gif" />
+    <Content Include="logo-icone-64.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
